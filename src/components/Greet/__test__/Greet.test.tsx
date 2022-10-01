@@ -4,8 +4,8 @@
 * */
 
 import {render, screen} from "@testing-library/react";
-import Greet from "./index";
 import exp from "constants";
+import Greet from "../index";
 
 // test("Greet renders correctly", () => {
 //     render(<Greet />);

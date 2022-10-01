@@ -15,7 +15,7 @@ import exp from "constants";
 
 describe("Greet", () => {
 
-    test("Greet renders correctly", () => {
+    it("Greet renders correctly", () => {
         render(<Greet />);
         const textElement = screen.getByText(/hello/i);
         expect(textElement).toBeInTheDocument();
@@ -31,7 +31,7 @@ describe("Greet", () => {
 })
 
 describe("Nested", () => {
-    test("Greet renders with a name", () => {
+    fit("Greet renders with a name", () => {
         render(<Greet name={"Prashant"} />);
         const textElement = screen.getByText("Hello Prashant");
         expect(textElement).toBeInTheDocument();
