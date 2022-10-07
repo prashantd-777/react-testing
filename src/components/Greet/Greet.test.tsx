@@ -5,7 +5,6 @@
 
 import {render, screen} from "@testing-library/react";
 import Greet from "./index";
-import exp from "constants";
 
 // test("Greet renders correctly", () => {
 //     render(<Greet />);
@@ -14,7 +13,6 @@ import exp from "constants";
 // })
 
 describe("Greet", () => {
-
     test("Greet renders correctly", () => {
         render(<Greet />);
         const textElement = screen.getByText(/hello/i);
@@ -28,12 +26,20 @@ describe("Greet", () => {
     //         expect(textElement).toBeInTheDocument();
     //     })
     // })
-})
 
-describe("Nested", () => {
-    test("Greet renders with a name", () => {
-        render(<Greet name={"Prashant"} />);
-        const textElement = screen.getByText("Hello Prashant");
+    test("content starts with", () => {
+        render(<Greet />);
+        const textElement = screen.getByText(content => {
+            return content.startsWith("Hello");
+        });
         expect(textElement).toBeInTheDocument();
     })
 })
+
+// describe("Nested", () => {
+//     test("Greet renders with a name", () => {
+//         render(<Greet name={"Prashant"} />);
+//         const textElement = screen.getByText("Hello Prashant");
+//         expect(textElement).toBeInTheDocument();
+//     })
+// })
