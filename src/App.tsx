@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
-import Application from "./components/Application";
-import Skills from "./components/Skills";
+import AppProvider from "./providers/app-provider";
+import MuiMode from "./components/mui/mui-mode";
 
 function App() {
     return (
-        <div className="App">
-            <Application/>
-            <Skills skills={["HTMl", "CSS", "JS"]}/>
-        </div>
+        <AppProvider>
+            <div className={"App"}>
+                <MuiMode />
+            </div>
+        </AppProvider>
     );
 }
 

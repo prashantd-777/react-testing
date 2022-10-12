@@ -46,7 +46,7 @@ const Application = () => {
                     </label>
                 </div>
                 <div>
-                    <button>Submit</button>
+                    <button disabled={true}>Submit</button>
                 </div>
             </form>
         </>
